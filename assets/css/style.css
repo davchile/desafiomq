@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: grid;
+    grid-template-areas: 
+        "nav"
+        "section"
+        "main"
+        "article"
+        "footer"
+    ;
+    grid-template-columns: 1fr;
+}
+
+nav {
+    background: #34495E;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    grid-area: nav;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul {
+    margin-bottom: 0rem;
+    padding-left: 1rem;
+}
+
+nav i {
+    padding: 5px;
+}
+
+section {
+    background: #CCD1D1;
+    height: 100px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    grid-area: section;
+}
+
+section p {
+    margin: 1rem 0 0 0;
+}
+
+.form-select {
+    width: 80%;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 1rem;
+    grid-area: main;
+}
+
+main div {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: grid;
+    justify-content: space-evenly;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 11px 9px 0 #EAEDED;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 1rem 0 1rem 0;
+}
+
+footer {
+    background: #34495E;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    text-align: center;
+}
+
+footer i {
+    margin: 1rem 5px 0;
+}
+
+@media (max-width: 576px) {
+    .menu-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    #root {
+        grid-template-columns: 2fr 10fr;
+        grid-template-areas: 
+        "nav section"
+        "nav main"
+        "footer article"
+    ;
+    }
+    .fa-bars {
+        display: none;
+    }
+    nav {
+        font-size: medium;
+    }
+    .gallery {
+        grid-template-columns: repeat(4, 2fr);
+        height: 80%;
+    }
+    nav {
+        display: block;
+        min-height: 100%;
+    }
+    .menu-desktop {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+
+
